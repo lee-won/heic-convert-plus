@@ -1,5 +1,5 @@
 {
-  "name": "heic-convert",
+  "name": "heic-convert-plus",
   "version": "1.0.0",
   "description": "Convert HEIC/HEIF images to JPEG and PNG",
   "main": "index.js",

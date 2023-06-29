@@ -15,7 +15,7 @@
 ## Install
 
 ```bash
-npm install heic-convert
+npm install heic-convert-plus
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ Convert the main image in a HEIC to JPEG
 ```javascript
 const { promisify } = require('util');
 const fs = require('fs');
-const convert = require('heic-convert');
+const convert = require('heic-convert-plus');
 
 (async () => {
   const inputBuffer = await promisify(fs.readFile)('/path/to/my/image.heic');
@@ -44,7 +44,7 @@ Convert the main image in a HEIC to PNG
 ```javascript
 const { promisify } = require('util');
 const fs = require('fs');
-const convert = require('heic-convert');
+const convert = require('heic-convert-plus');
 
 (async () => {
   const inputBuffer = await promisify(fs.readFile)('/path/to/my/image.heic');
@@ -62,7 +62,7 @@ Convert all images in a HEIC
 ```javascript
 const { promisify } = require('util');
 const fs = require('fs');
-const convert = require('heic-convert');
+const convert = require('heic-convert-plus');
 
 (async () => {
   const inputBuffer = await promisify(fs.readFile)('/path/to/my/image.heic');
@@ -88,3 +88,8 @@ _Note that while the converter returns a Promise and is overall asynchronous, a 
 * [heic-cli](https://github.com/catdad-experiments/heic-cli) - convert heic/heif images to jpeg or png from the command line
 * [heic-decode](https://github.com/catdad-experiments/heic-decode) - decode heic images to raw image data
 * [libheif-js](https://github.com/catdad-experiments/libheif-js) - libheif as a pure-javascript npm module
+
+## Feature
+
+本仓库基于(https://github.com/catdad-experiments/heic-convert)修改，修复了打包构建后 libheif.js error:  Cannot assign to read only property 'stack' of object 'Error: No such file or directory' 的问题
+
