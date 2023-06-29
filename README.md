@@ -91,5 +91,5 @@ _Note that while the converter returns a Promise and is overall asynchronous, a 
 
 ## Feature
 
-本仓库基于(https://github.com/catdad-experiments/heic-convert)修改，修复了打包构建后 libheif.js error:  Cannot assign to read only property 'stack' of object 'Error: No such file or directory' 的问题
+本仓库基于 (https://github.com/catdad-experiments/heic-convert) 修改，修复了打包构建后 libheif.js error:  Cannot assign to read only property 'stack' of object 'Error: No such file or directory' 的问题
 
